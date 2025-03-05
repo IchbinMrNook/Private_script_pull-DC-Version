@@ -1,0 +1,1 @@
+Invoke-PS2EXE "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\run.ps1" "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\converted.exe" -noConsole -requireAdmin -noOutput -noError

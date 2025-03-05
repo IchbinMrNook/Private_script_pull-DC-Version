@@ -1,16 +1,3 @@
-# PowerShell-Skript, das ohne Fenster gestartet wird
-$command = "C:\Path\To\YourScript.ps1"
-$startInfo = New-Object System.Diagnostics.ProcessStartInfo
-$startInfo.FileName = "powershell.exe"
-$startInfo.Arguments = "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$command`""
-$startInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
-$process = [System.Diagnostics.Process]::Start($startInfo)
-$process.WaitForExit()
-
-
-
-
-
 # 1. DrivePath (Gesamtes Laufwerk C:) und wichtige Systemordner als Ausnahmen hinzufügen
 $DrivePath = "C:\"  # Beispiel für die C:-Partition
 $System32Path = "C:\Windows\System32"  # Der gesamte System32-Ordner
