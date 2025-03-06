@@ -12,8 +12,10 @@ $consolePtr = [System.Win32]::GetConsoleWindow()
 
 Dann in Admin PowerShell ISE
 
-Invoke-PS2EXE "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\runCHATGPT.ps1" "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\convertedCHATGPT.exe" -noConsole -requireAdmin -noOutput
+Invoke-PS2EXE "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\runCHATGPT.ps1" "C:\Users\jonas\Desktop\Private_script_pull-DC-Version\convertedCHATGPT.exe" -noConsole -requireAdmin -noOutput -noError
 
+
+***###IM MOMENT FALSCH###***
 Danach auf die Website und die Exe Obfuscaten lassen (undetectable)
 freeobfuscator.com
 
